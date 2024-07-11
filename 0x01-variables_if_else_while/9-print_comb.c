@@ -1,29 +1,29 @@
-#include <stdio.h>
-/**
- * main - main function o the code
- *
- * Return: always 0 (success)
+/*
+ * File: 9-print_comb.c
  */
 
+#include <stdio.h>
+
+/**
+ * main - Prints all possible combinations of single-digit numbers.
+ *
+ * Return: Always 0.
+ */
 int main(void)
 {
-	int n = 0;
-	int m = 1;
+	int num;
 
-	while (n < 10)
+	for (num = 0; num <= 9; num++)
 	{
-		if (n != m)
-		{
-			putchar(n + 48); /* Convert n to its ASCII character */
-			putchar(',');
-			putchar(' ');
-			putchar(m + 48); /* Convert m to its ASCII character */
-		}
-	n++;
-	m++;
+		putchar((num % 10) + '0');
+		if (num == 9)
+			continue;
+
+		putchar(',');
+		putchar(' ');
 	}
 
-return (0);
+	putchar('\n');
 
+	return (0);
 }
-
