@@ -2,7 +2,7 @@
 
 /**
  * main - main function
- * 
+ *
  * Description: print 50 fibonaci numbers
  *
  * Return: always (0) success
@@ -18,12 +18,20 @@ int main(void)
 	for (x = 1; x <= 50; x++)
 	{
 
-	unsigned long fibo = a + b;
+		unsigned long fibo = a + b;
 
-		printf("%lu, ", fibo);
+		if (x == 50)
 
-		a = b;
-		b = fibo;
+			printf("%lu", fibo);
+
+		else
+
+		{
+			printf("%lu, ", fibo);
+
+			a = b;
+			b = fibo;
+		}
 	}
 
 	return (0);
